@@ -20,8 +20,8 @@ function addBookToLibrary() {
     const pages = document.getElementById('pages').value;
     const read = document.getElementById('read').checked;
 
-    if (title === '' || author === '' || pages === '') {
-        alert('Please fill in all fields');
+    const formElement = document.querySelector('form');
+    if (formElement.reportValidity() === false) {
         return;
     }
 
